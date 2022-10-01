@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1;
+  color: #555;
+  overflow-x: hidden;
+  font-size: 1.8rem;
+}
+main {
+  max-width: 144rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+}
+.gradient-background {
+  background-image: url("/images/bg-main-desktop.png");
+}
