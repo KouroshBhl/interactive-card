@@ -91,6 +91,9 @@ input {
 input:focus {
   border: 1px solid hsl(278, 94%, 30%);
 }
+input::placeholder {
+  color: hsl(270, 3%, 87%);
+}
 .label-text {
   margin-left: 1.2rem;
 }

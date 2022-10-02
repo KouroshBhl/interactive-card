@@ -27,10 +27,18 @@
         <div class="form-container">
           <form method="post" class="form-validate">
             <label for="card-number" class="label-text">CARDHOLDER NAME</label>
-            <input type="text" class="card-holder-name" />
+            <input
+              type="text"
+              class="card-holder-name"
+              placeholder="e.g.  KOUROSH BAHARLOO"
+            />
 
             <label for="card-number" class="label-text">CARD NUMBER</label>
-            <input type="number" class="card-holder-number" />
+            <input
+              type="number"
+              class="card-holder-number"
+              placeholder="e.g. 1234 5678 1234 5678"
+            />
 
             <div class="exp__cvc--holder">
               <div>
@@ -38,14 +46,29 @@
                   >EXP. DATE (MM/YY)</label
                 >
                 <div class="container__month-year">
-                  <input type="number" name="month" id="month__date" />
-                  <input type="number" name="year" id="year__date" />
+                  <input
+                    type="number"
+                    name="month"
+                    id="month__date"
+                    placeholder="MM"
+                  />
+                  <input
+                    type="number"
+                    name="year"
+                    id="year__date"
+                    placeholder="YY"
+                  />
                 </div>
               </div>
 
               <div class="container-cvc">
                 <label for="cvv" class="label-text">CVC</label>
-                <input type="number" name="cvv" id="cvv" />
+                <input
+                  type="number"
+                  name="cvv"
+                  id="cvv"
+                  placeholder="e.g. 123"
+                />
               </div>
             </div>
             <button type="button" class="btn-submit">CONFIRM</button>
