@@ -52,17 +52,15 @@ main {
 }
 .gradient-background {
   background-image: url("/images/bg-main-desktop.png");
+  position: relative;
 }
 .form-holder {
   position: relative;
   align-self: center;
   justify-self: center;
+  padding-left: 18rem;
 }
-.form-container {
-  /* position: absolute;
-  top: 50%;
-  transform: translateY(-50%); */
-}
+
 .form-validate {
   display: grid;
   /* flex-direction: column; */
@@ -84,4 +82,16 @@ input {
 }
 .container__month-year input {
   width: 8rem;
+}
+.front-card,
+.back-card {
+  position: absolute;
+}
+.front-card {
+  top: 16rem;
+  left: 18rem;
+}
+.back-card {
+  top: 43rem;
+  left: 25rem;
 }
