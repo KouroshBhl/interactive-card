@@ -66,9 +66,11 @@ main {
   /* flex-direction: column; */
 }
 input {
-  outline: hsl(270, 3%, 87%);
+  outline-color: blue;
+  /* outline: 2px solid; */
   height: 4rem;
   margin: 1.2rem;
+  border-radius: 0.7rem;
 }
 .label-text {
   margin-left: 1.2rem;
@@ -83,6 +85,10 @@ input {
 .container__month-year input {
   width: 8rem;
 }
+.container-cvc {
+  display: flex;
+  flex-direction: column;
+}
 .front-card,
 .back-card {
   position: absolute;
@@ -94,4 +100,12 @@ input {
 .back-card {
   top: 43rem;
   left: 25rem;
+}
+.btn-submit {
+  padding: 1.8rem;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 0.7rem;
 }
