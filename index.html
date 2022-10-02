@@ -17,13 +17,33 @@
     <main>
       <div class="gradient-background"></div>
       <div class="form-holder">
-        <form method="post" class="form-validate">
-          <label for="card-number">CARDHOLDER NAME</label>
-          <input type="number" class="card-holder-name" />
+        <div class="form-container">
+          <form method="post" class="form-validate">
+            <label for="card-number" class="label-text">CARDHOLDER NAME</label>
+            <input type="number" class="card-holder-name" />
 
-          <label for="card-number">CARD NUMBER</label>
-          <input type="number" class="card-holder-number" />
-        </form>
+            <label for="card-number" class="label-text">CARD NUMBER</label>
+            <input type="number" class="card-holder-number" />
+
+            <div class="exp__cvc--holder">
+              <div>
+                <label for="month__date" class="label-text"
+                  >EXP. DATE (MM/YY)</label
+                >
+                <div class="container__month-year">
+                  <input type="number" name="month" id="month__date" />
+                  <input type="number" name="year" id="year__date" />
+                </div>
+              </div>
+
+              <div>
+                <label for="cvv" class="label-text">CVC</label>
+                <input type="number" name="cvv" id="cvv" />
+              </div>
+            </div>
+            <button type="submit">CONFIRM</button>
+          </form>
+        </div>
       </div>
     </main>
   </body>

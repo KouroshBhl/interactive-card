@@ -1,3 +1,32 @@
+/*
+! (01) TYPOGRAPHY SYSTEM
+*Font size system (px): 
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+*font weight: 
+Default 400px
+bold 700
+*Line height: 
+Default: 1
+line height: 1.6
+==================================================
+! (02) COLORS
+Primary: #e67e22
+Tints: #fdf2e9  #fae5d3
+Shades:  #b8651b #cf711f
+Accents:
+Greys: #343a40 #adb5bd #dee2e6
+==================================================
+! (03) Shadows
+==================================================
+! (04) Border radius
+Border radius: 9px
+==================================================
+!(05) WhiteSpace
+*SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+==================================================
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -23,4 +52,36 @@ main {
 }
 .gradient-background {
   background-image: url("/images/bg-main-desktop.png");
+}
+.form-holder {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+}
+.form-container {
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-50%); */
+}
+.form-validate {
+  display: grid;
+  /* flex-direction: column; */
+}
+input {
+  outline: hsl(270, 3%, 87%);
+  height: 4rem;
+  margin: 1.2rem;
+}
+.label-text {
+  margin-left: 1.2rem;
+}
+.exp__cvc--holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container__month-year {
+  display: flex;
+}
+.container__month-year input {
+  width: 8rem;
 }
