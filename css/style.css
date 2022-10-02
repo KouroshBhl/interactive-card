@@ -65,12 +65,31 @@ main {
   display: grid;
   /* flex-direction: column; */
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 input {
-  outline-color: blue;
-  /* outline: 2px solid; */
+  outline: none;
   height: 4rem;
   margin: 1.2rem;
   border-radius: 0.7rem;
+  margin-bottom: 3.2rem;
+  border: 1px solid hsl(270, 3%, 87%);
+  padding-left: 1.8rem;
+  font-size: 1.8rem;
+  font-family: "Space Grotesk", sans-serif;
+  transition: all 600ms;
+}
+
+input:focus {
+  border: 1px solid hsl(278, 94%, 30%);
 }
 .label-text {
   margin-left: 1.2rem;
@@ -108,4 +127,10 @@ input {
   color: hsl(0, 0%, 100%);
   background-color: hsl(278, 68%, 11%);
   border-radius: 0.7rem;
+  cursor: pointer;
+  transition: all 500ms;
+  font-size: 1.8rem;
+}
+.btn-submit:hover {
+  background-color: hsla(278, 68%, 11%, 0.932);
 }
