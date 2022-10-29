@@ -12,33 +12,71 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="./script.js"></script>
   </head>
   <body>
     <main>
       <div class="gradient-background">
         <div class="front-card">
-          <img src="./images/bg-card-front.png" alt="" srcset="" />
+          <div class="card-detail">
+            <div class="card-detail__logo">
+              <svg
+                width="84"
+                height="47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <ellipse
+                  cx="23.478"
+                  cy="23.5"
+                  rx="23.478"
+                  ry="23.5"
+                  fill="#fff"
+                />
+                <path
+                  d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+                  stroke="#fff"
+                />
+              </svg>
+            </div>
+            <p class="card-detail__number">0000000000000000</p>
+            <div class="card-detail__name-cvc">
+              <p class="card-detail__name">Kourosh Baharloo</p>
+              <div class="card-detail__date--box">
+                <p class="card-detail__date--month">11/</p>
+                <p class="card-detail__date--year">25</p>
+              </div>
+            </div>
+          </div>
+          <img src="./images/bg-card-front.png" alt="image" />
         </div>
         <div class="back-card">
-          <img src="./images/bg-card-back.png" alt="" srcset="" />
+          <div class="back-card__cvc">
+            <span class="back-card__cvc--number">262</span>
+          </div>
+          <img src="./images/bg-card-back.png" alt="image" />
         </div>
       </div>
       <div class="form-holder">
         <div class="form-container">
           <form method="post" class="form-validate">
-            <label for="card-number" class="label-text">CARDHOLDER NAME</label>
+            <label for="card-name" class="label-text">CARDHOLDER NAME</label>
             <input
               type="text"
               class="card-holder-name"
               placeholder="e.g.  KOUROSH BAHARLOO"
+              id="card-name"
             />
+            <label for="card-name" class="error">Wrong format</label>
 
             <label for="card-number" class="label-text">CARD NUMBER</label>
             <input
               type="number"
               class="card-holder-number"
               placeholder="e.g. 1234 5678 1234 5678"
+              id="card-number"
             />
+            <label for="card-number" class="error">Wrong format</label>
 
             <div class="exp__cvc--holder">
               <div>
@@ -59,6 +97,7 @@
                     placeholder="YY"
                   />
                 </div>
+                <label for="month__date" class="error">Wrong format</label>
               </div>
 
               <div class="container-cvc">
@@ -69,9 +108,10 @@
                   id="cvv"
                   placeholder="e.g. 123"
                 />
+                <label for="cvv" class="error">Wrong format</label>
               </div>
             </div>
-            <button type="button" class="btn-submit">CONFIRM</button>
+            <button type="submit" class="btn-submit">CONFIRM</button>
           </form>
         </div>
       </div>

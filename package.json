@@ -1,0 +1,26 @@
+{
+  "name": "interactive-card",
+  "version": "1.0.0",
+  "description": "![Design preview for the Interactive card details form coding challenge](./design/desktop-preview.jpg)",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KouroshBhl/interactive-card.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KouroshBhl/interactive-card/issues"
+  },
+  "homepage": "https://github.com/KouroshBhl/interactive-card#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0",
+    "sass": "^1.55.0"
+  }
+}
