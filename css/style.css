@@ -175,3 +175,10 @@ input::placeholder {
   margin-bottom: 3.2rem;
   color: red;
 }
+
+.wrong {
+  border: 1px solid red;
+}
+.correct {
+  border: 1px solid green;
+}

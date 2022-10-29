@@ -45,16 +45,22 @@ init();
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  const res = inputs.every((inp, i) => {
-    return inp.value.length !== 0;
-    if (inp.value.length !== 0) return inp;
-  });
+  //? Check if every inputs are filled
+  const res = inputs.every((inp) => inp.value.length !== 0);
 
+  //? filter inputs are empty
   const checkInput = inputs.filter((el) => el.value.length === 0);
+
+  //? Remove wrong class at the first
+  inputs.forEach((el) => el.classList.remove('wrong'));
+
+  //? Check if every inputs are filled
   if (!res) {
     labelError.forEach((el) => (el.textContent = ''));
-    checkInput.map((el) => {
+    checkInput.forEach((el) => {
       el.nextElementSibling.textContent = 'Can not be blank!';
+      el.classList.add('wrong');
     });
+    return;
   }
 });
