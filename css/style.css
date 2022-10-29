@@ -102,7 +102,8 @@ input::placeholder {
   grid-template-columns: 1fr 1fr;
 }
 .container__month-year {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .container__month-year input {
   width: 8rem;

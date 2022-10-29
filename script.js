@@ -17,6 +17,16 @@ const labelCardNumber = document.querySelector('.error__card--number');
 const labelCardDate = document.querySelector('.error__card--date');
 const labelCardCVC = document.querySelector('.error__card--cvc');
 
+const labelError = document.querySelectorAll('.error');
+
+const inputs = [
+  inputCardName,
+  inputCardNumber,
+  inputCardMonth,
+  inputCardYear,
+  inputCardCVC,
+];
+
 const showRealTime = function (input, show) {
   input.addEventListener('input', function () {
     show.textContent = input.value;
@@ -34,6 +44,17 @@ init();
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
-  console.log('Ok');
-  if (!inputCardName) return;
+
+  const res = inputs.every((inp, i) => {
+    return inp.value.length !== 0;
+    if (inp.value.length !== 0) return inp;
+  });
+
+  const checkInput = inputs.filter((el) => el.value.length === 0);
+  if (!res) {
+    labelError.forEach((el) => (el.textContent = ''));
+    checkInput.map((el) => {
+      el.nextElementSibling.textContent = 'Can not be blank!';
+    });
+  }
 });

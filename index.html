@@ -67,9 +67,7 @@
               placeholder="e.g.  KOUROSH BAHARLOO"
               id="card-name"
             />
-            <label for="card-name" class="error error__card--name"
-              >Wrong format</label
-            >
+            <p class="error error__card--name"></p>
 
             <label for="card-number" class="label-text">CARD NUMBER</label>
             <input
@@ -78,8 +76,8 @@
               placeholder="e.g. 1234 5678 1234 5678"
               id="card-number"
             />
-            <label for="card-number" class="error error__card--number"
-              >Wrong format</label
+            <p class="error error__card--number"
+              ></label
             >
 
             <div class="exp__cvc--holder">
@@ -87,23 +85,27 @@
                 <label for="month__date" class="label-text"
                   >EXP. DATE (MM/YY)</label
                 >
-                <div class="container__month-year">
-                  <input
+                    <div class="container__month-year">
+                      <input
                     type="number"
                     name="month"
                     id="month__date"
                     placeholder="MM"
+                    class="month__date"
                   />
                   <input
                     type="number"
                     name="year"
                     id="year__date"
                     placeholder="YY"
+                    class="year__date"
                   />
-                </div>
-                <label for="month__date" class="error error__card--date"
-                  >Wrong format</label
+                  <p class="error error__card--date"
+                  ></label
                 >
+                 
+                </div>
+                
               </div>
 
               <div class="container-cvc">
@@ -113,9 +115,10 @@
                   name="cvv"
                   id="cvv"
                   placeholder="e.g. 123"
+                  class="cvv"
                 />
-                <label for="cvv" class="error error__card--cvc"
-                  >Wrong format</label
+                <p class="error error__card--cvc"
+                  ></label
                 >
               </div>
             </div>
