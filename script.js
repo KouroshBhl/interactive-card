@@ -12,6 +12,11 @@ const showCardDateMonth = document.querySelector('.card-detail__date--month');
 const showCardDateYear = document.querySelector('.card-detail__date--year');
 const showCardCVC = document.querySelector('.back-card__cvc--number');
 
+const labelCardName = document.querySelector('.error__card--name');
+const labelCardNumber = document.querySelector('.error__card--number');
+const labelCardDate = document.querySelector('.error__card--date');
+const labelCardCVC = document.querySelector('.error__card--cvc');
+
 const showRealTime = function (input, show) {
   input.addEventListener('input', function () {
     show.textContent = input.value;
