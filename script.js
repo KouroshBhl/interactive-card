@@ -1,4 +1,6 @@
 'use strict';
+
+//? Select all values
 const form = document.querySelector('.form-validate');
 const inputCardName = document.querySelector('.card-holder-name');
 const inputCardNumber = document.querySelector('.card-holder-number');
@@ -19,6 +21,7 @@ const labelCardCVC = document.querySelector('.error__card--cvc');
 
 const labelError = document.querySelectorAll('.error');
 
+//! All inputes in array
 const inputs = [
   inputCardName,
   inputCardNumber,
@@ -28,11 +31,14 @@ const inputs = [
 ];
 
 const showRealTime = function (input, show) {
-  input.addEventListener('input', function () {
-    show.textContent = input.value;
-  });
+  input.addEventListener('input', () => (show.textContent = input.value));
 };
 
+// function numberWithSpaces(x) {
+//   return x.toString().replace(/\B(?=(\d{4})+(?!\d))/g, ' ');
+// }
+
+//! Listen for all inputs at the beggining
 const init = function () {
   showRealTime(inputCardName, showCardHolderName);
   showRealTime(inputCardNumber, showCardNumber);
@@ -42,20 +48,22 @@ const init = function () {
 };
 init();
 
+//! Listen for form Submit
 form.addEventListener('submit', function (e) {
   e.preventDefault();
+  console.log(numberWithSpaces(inputCardNumber.value));
 
-  //? Check if every inputs are filled
-  const res = inputs.every((inp) => inp.value.length !== 0);
+  //? 1) Check if every inputs are filled
+  const notEmpty = inputs.every((inp) => inp.value.length !== 0);
 
-  //? filter inputs are empty
+  //? 2) filter inputs are empty
   const checkInput = inputs.filter((el) => el.value.length === 0);
 
-  //? Remove wrong class at the first
+  //? 3) Remove wrong class at the first
   inputs.forEach((el) => el.classList.remove('wrong'));
 
-  //? Check if every inputs are filled
-  if (!res) {
+  //? 4) Check if every inputs are filled
+  if (!notEmpty) {
     labelError.forEach((el) => (el.textContent = ''));
     checkInput.forEach((el) => {
       el.nextElementSibling.textContent = 'Can not be blank!';
